@@ -1,0 +1,41 @@
+<aside class="sidebar" id="sidebar" aria-label="Navigation principale">
+    <div class="sidebar-brand">
+        <a href="/" class="brand-name">BLOOPS</a>
+    </div>
+
+    <nav class="sidebar-navigation">
+        {% if profil == "enfant" %}
+            <a href="/espace/enfant">Accueil</a>
+            <a href="/taches">Activités</a>
+            <a href="/contacts">Contacts</a>
+            <a href="/stockage">Stockage</a>
+
+        {% elif profil == "adolescent" %}
+            <a href="/espace/adolescent">Tableau de bord</a>
+            <a href="/messagerie">Messagerie</a>
+            <a href="/contacts">Contacts</a>
+            <a href="/agenda">Agenda</a>
+            <a href="/taches">Tâches</a>
+            <a href="/automatisateur">Automatisateur</a>
+            <a href="/stockage">Stockage</a>
+            <a href="/parametres">Paramètres</a>
+
+        {% elif profil == "adulte" %}
+            <a href="/espace/adulte">Tableau de bord</a>
+            <a href="/messagerie">Messagerie</a>
+            <a href="/contacts">Contacts</a>
+            <a href="/agenda">Agenda</a>
+            <a href="/taches">Tâches</a>
+            <a href="/automatisateur">Automatisateur</a>
+            <a href="/stockage">Stockage</a>
+            <a href="/parametres">Paramètres</a>
+
+        {% elif profil == "parent" %}
+            <a href="/espace/parent">Tableau de bord</a>
+            <a href="/espace/parent">Profils supervisés</a>
+            <a href="/espace/parent">Autorisations</a>
+            <a href="/contacts">Demandes de contacts</a>
+            <a href="/parametres">Paramètres</a>
+        {% endif %}
+    </nav>
+</aside>
