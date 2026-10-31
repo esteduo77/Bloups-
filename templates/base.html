@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#5546c8">
+    <title>{% block title %}BLOOPS{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-shell">
+        {% if profil is defined %}
+            {% include "components/sidebar.html" %}
+        {% endif %}
+
+        <div class="main-area">
+            {% include "components/topbar.html" %}
+            <main class="page-content">
+                {% block content %}{% endblock %}
+            </main>
+            <footer class="site-footer">
+                <span>© BLOOPS</span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/navigation.js') }}" defer></script>
+</body>
+</html>
